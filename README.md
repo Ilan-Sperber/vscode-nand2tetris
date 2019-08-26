@@ -13,12 +13,15 @@
 ## Preview
 
 1. Of course highlighting works for your custom chips too
+
 ![Syntax highlighting](preview-syntax.gif)
 
 2. Assembly syntax
+
 ![Assembly Syntax](asm-syntax.png)
 
 3. The icons
+
 ![Icon Pack](preview-icons.gif)
 
 ## Known Issues
