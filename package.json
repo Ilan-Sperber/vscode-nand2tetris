@@ -38,7 +38,7 @@
         "snippets": [
             {
               "language": "hdl",
-              "path": "./snippets.json"
+              "path": "./snippets/snippets.json"
             }
         ],
         "iconThemes": [
