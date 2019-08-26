@@ -1,0 +1,62 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Assembly",
+	"patterns": [
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {		
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash",
+					"match": "//.*"
+				},
+				{
+					"begin": "\\/\\*\\*",
+					"end": "\\*\\/",
+					"name": "comment.block"
+				},
+				{
+					"begin": "\\/\\*",
+					"end": "\\*\\/",
+					"name": "comment.block"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "entity.name.function",
+					"match": "R\\d{1,2}"
+				},
+				{
+					"name": "variable.name",
+					"match": "(?<=@)([a-z]|[A-Z]|_)+"
+				},
+				{
+					"name": "variable.language",
+					"match": "(?<=@)[0-9]+"
+				},
+				{
+					"name": "support.function",
+					"match": "@"
+				},
+				{
+					"name": "variable.name",
+					"begin": "\\(",
+					"end": "\\)"
+				},
+				{
+					"name": "keyword",
+					"match": "(JEQ|JNE|JGT|JMP|JLT)"
+				}
+			]
+		}
+	},
+	"scopeName": "source.asm"
+}

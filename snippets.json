@@ -1,0 +1,170 @@
+{
+    "Nand Gate": {
+        "prefix": "Nand",
+        "body": ["Nand(a=${1:inA}, b=${2:inB}, out=${3:out});"],
+        "description": "Nand Gate \n First compares the two inputs ((a,b) = c) then negates the output (out = Not c).\n | a | b |out\n| 0 | 0 | 1\n| 1 | 0 | 1\n| 0 | 1 | 1\n| 1 | 1 | 0\n" 
+    },
+    "And": {
+        "prefix": "And",
+        "body": ["And(a=${1:inA}, b=${2:inB}, out=${3:out});"],
+        "description": "And Gate \n Compares the two inputs (a,b).\n | a | b |out\n| 0 | 0 | 0\n| 1 | 0 | 0\n| 0 | 1 | 0\n| 1 | 1 | 1\n" 
+    },
+    "And16": {
+        "prefix": "And16",
+        "body": ["And16(a=${1:inA}, b=${2:inB}, out=${3:out});"],
+        "description": "And16 Gate \n Requires two 16bit busses as inputs. Compares the two inputs (a,b).\n" 
+    },
+    "Not": {
+        "prefix": "Not",
+        "body": ["Not(in=${1:input}, out=${2:out});"],
+        "description": "Not Gate \n Negates the input (out = -in).\n | a |out\n| 0 | 1\n| 1 | 0\n" 
+    },
+    "Not16": {
+        "prefix": "Not16",
+        "body": ["Not16(in=${1:input}, out=${2:out});"],
+        "description": "Not16 Gate \n Takes a 16bit bus as input. Negates the input (out = -in). Repeats the Not gate 16 times for every bit of the input.\n" 
+    },
+    "Or": {
+        "prefix": "Or",
+        "body": ["Or(a=${1:inA}, b=${2:inB}, out=${3:out});"],
+        "description": "Or Gate \n Outputs true (or 1) if at least one of the inputs is true.\n | a | b |out\n| 0 | 0 | 0\n| 1 | 0 | 1\n| 0 | 1 | 1\n| 1 | 1 | 1\n" 
+    },
+    "Or16": {
+        "prefix": "Or16",
+        "body": ["Or16(a=${1:inA}, b=${2:inB}, out=${3:out});"],
+        "description": "Or16 Gate \n Takes a 16bit bus as input. Outputs true (or 1) if at least one of the inputs (a,b) is true. This is done for every bit of the 16 bits.\n" 
+    },
+    "Mux (Multiplexor)": {
+        "prefix": "Mux",
+        "body": ["Mux(a=${1:inA}, b=${2:inB}, sel=${3:selector}, out=${4:out});"],
+        "description": "Mux Gate \n Outputs the input of the selected input. If sel is 0, a gets outputted or vice versa.\n" 
+    },
+    "Mux16": {
+        "prefix": "Mux16",
+        "body": ["Mux16(a=${1:inA}, b=${2:inB}, sel=${3:selector}, out=${4:out});"],
+        "description": "Mux16 Gate \n Requires a 16bit bus. Outputs the input of the selected input. If sel is 0, a gets outputted or vice versa.\n" 
+    },
+    "Mux4Way16": {
+        "prefix": "Mux4Way16",
+        "body": ["Mux4Way16(a=${1:inA}, b=${2:inB}, c=${3:inC}, d=${4:inD}, sel=${5:selector}, out=${6:out});"],
+        "description": "Mux4Way16 Gate \n Requires four 16bit input busses and a two bit selector (sel)\n" 
+    },
+    "Mux8Way16": {
+        "prefix": "Mux8Way16",
+        "body": ["Mux8Way16(a=${1:inA}, b=${2:inB}, c=${3:inC}, d=${4:inD}, e=${5:inE}, f=${6:inF}, g=${7:inG}, h=${8:inH}, sel=${9:selector}, out=${10:out});"],
+        "description": "Mux8Way16 Gate \n Requires 8 16bit input busses and a three bit selector (sel)\n" 
+    },
+    "DMux (Demultiplexor)": {
+        "prefix": "DMux",
+        "body": ["DMux(in=${1:input}, sel=${2:selector}, a=${3:outputA}, b=${4:outputB});"],
+        "description": "DMux Gate \n Reverses the multiplexor. If sel == 0, the input is the output of a and b = 0. If sel == 1, a is the zero and output b is equal to the input.\n" 
+    },
+    "DMux4Way": {
+        "prefix": "DMux4Way",
+        "body": ["DMux4Way(in=${1:input}, sel=${2:selector}, a=${3:outputA}, b=${4:outputB}, c=${5:outputC}, d=${6:outputD});"],
+        "description": "DMux4Way Gate \n Is the same like the DMux Gate but has four outputs. And it needs a two bit selector.\n" 
+    },
+    "DMux8Way": {
+        "prefix": "DMux8Way",
+        "body": ["DMux8Way(in=${1:input}, sel=${2:selector}, a=${3:outputA}, b=${4:outputB}, c=${5:outputC}, d=${6:outputD}, e=${7:outputE}, f=${8:outputF}, g=${9:outputG}, h=${10:outputH});"],
+        "description": "DMux8Way Gate \n Is the same like the DMux Gate but has 8 outputs. And it needs a three bit selector.\n"
+    },
+    "Xor Gate": {
+        "prefix": "Xor",
+        "body": ["Xor(a=${1:inA}, b=${2:inB}, out=${3:out});"],
+        "description": "Xor Gate \n Outputs the result of (not (a and b)).\n | a | b |out\n| 0 | 0 | 1\n| 1 | 0 | 1\n| 0 | 1 | 1\n| 1 | 1 | 0\n" 
+    },
+    "ALU Chip": {
+        "prefix": "ALU",
+        "body": ["ALU(x=${1:inputX16}, y=${2:inputY16}, zx=${3:zeroX}, nx=${4:negateX}, zy=${5:zeroY}, ny=${6:negateY}, f=${7:whatCompute}, no=${8:negateOutput}, out=${9:output16}, zr=${10:outEquals0}, ng=${11:outNegative});"],
+        "description": "ALU \n The ALU is used to compute certain functions.\n" 
+    },
+    "Add16": {
+        "prefix": "Add16",
+        "body": ["Add16(a=${1:inA}, b=${2:inB}, out=${3:out16});"],
+        "description": "Add16 Gate \n Adds two 16-bit values. The most significant carry bit is ignored.\n" 
+    },
+    "FullAdder": {
+        "prefix": "FullAdder",
+        "body": ["FullAdder(a=${1:inA}, b=${2:inB}, c=${3:inB}, sum=${4:outSum}, carry=${5:outCarry});"],
+        "description": "FullAdder CHIP \n Computes sum, the least significant bit of a + b + c, and carry, the most significant bit of a + b + c.\n" 
+    },
+    "HalfAdder": {
+        "prefix": "HalfAdder",
+        "body": ["HalfAdder(a=${1:inA}, b=${2:inB}, sum=${4:outSum}, carry=${5:outCarry});"],
+        "description": "HalfAdder CHIP \n Computes sum, the least significnat bit of a + b, and carry, the most significnat bit of a + b.\n" 
+    },
+    "Inc16": {
+        "prefix": "Inc16",
+        "body": ["Inc16(in=${1:inA16}, out=${2:out16});"],
+        "description": "Inc16 CHIP \n 16-bit incrementer.  out = in + 1 (16-bit addition). Overflow is neither detected nor handled.\n" 
+    },
+    "Bit": {
+        "prefix": "Bit",
+        "body":["Bit(in=${1:input}, load=${2:loading}, out=${3:output});"],
+        "description": "Bit\n1-bit register.\nIf load[t] == 1 then out[t+1] = in[t]\nelse out[t+1] = out[t] (no change)\n"
+    },
+    "PC": {
+        "prefix": "PC",
+        "body":["PC(in=${1:input16}, load=${2:loading}, inc=${3:increment}, reset=${4:reset}, out=${5:output16});"],
+        "description": "PC (Program Counter)\n16-bit counter with load and reset controls.\n"
+    },
+    "RAM8": {
+        "prefix": "RAM8",
+        "body":["RAM8(in=${1:input16}, load=${2:loading}, address=${3:address3} out=${4:output16});"],
+        "description": "Ram8 \nthe chip always outputs the value stored at the memory location specified by address. If load == 1, the in value is loaded into the memory location specified by address.\n This value becomes available through the out output starting from the next time step.\n"
+    },
+    "RAM64": {
+        "prefix": "RAM64",
+        "body":["RAM64(in=${1:input16}, load=${2:loading}, address=${3:address6} out=${4:output16});"],
+        "description": "Ram64 \nthe chip always outputs the value stored at the memory location specified by address. If load == 1, the in value is loaded into the memory location specified by address.\n This value becomes available through the out output starting from the next time step.\n"
+    },
+    "RAM16K": {
+        "prefix": "RAM16K",
+        "body":["RAM16K(in=${1:input16}, load=${2:loading}, address=${3:address14} out=${4:output16});"],
+        "description": "Ram16K \nthe chip always outputs the value stored at the memory location specified by address. If load == 1, the in value is loaded into the memory location specified by address.\n This value becomes available through the out output starting from the next time step.\n"
+    },
+    "RAM4K": {
+        "prefix": "RAM4K",
+        "body":["RAM4K(in=${1:input16}, load=${2:loading}, address=${3:address12} out=${4:output16});"],
+        "description": "Ram4K \nthe chip always outputs the value stored at the memory location specified by address. If load == 1, the in value is loaded into the memory location specified by address.\n This value becomes available through the out output starting from the next time step.\n"
+    },
+    "RAM512": {
+        "prefix": "RAM512",
+        "body":["RAM512(in=${1:input16}, load=${2:loading}, address=${3:address19} out=${4:output16});"],
+        "description": "Ram512 \nthe chip always outputs the value stored at the memory location specified by address. If load == 1, the in value is loaded into the memory location specified by address.\n This value becomes available through the out output starting from the next time step.\n"
+    },
+    "Register": {
+        "prefix": "Register",
+        "body":["Register(in=${1:input16}, load=${2:loading}, out=${3:output16});"],
+        "description": "Register \nIf load[t-1]=1 then out[t] = in[t-1] else out does not change (out[t] = out[t-1])\n"
+    },
+    "CPU": {
+        "prefix": "CPU",
+        "body":["CPU(inM=${1:input16}, instruction=${2:instruction16}, reset=${3:reset}, outM=${4:outM16}, writeM=${5:outwriteIntoM}, addressM=${6:outAddressM15}, pc=${7:outPc15});"],
+        "description": " CPU \nConsists of an ALU and a set of registers, designed to fetch and execute instructions written in the Hack machine language. In particular, the ALU executes the inputted instruction according to the Hack machine language specification, as follows. The D and A in the language specification refer to CPU-resident registers, while M refers to the memory register addressed by A, i.e. to Memory[A]. The inM input holds the value of this register. If the current instruction needs to write a value to M, the value is placed in outM, the address of the target register is placed in the addressM output, and the writeM control bit is asserted. (When writeM=0, any value may appear in outM). The outM and writeM outputs are combinational: they are affected instantaneously by the execution of the current instruction. The addressM and pc outputs are clocked: although they are affected by the execution of the current instruction, they commit to their new values only in the next time unit. If reset == 1, then the CPU jumps to address 0 (i.e. sets pc = 0 in next time unit) rather than to the address resulting from executing the current instruction.\n"
+    },
+    "Computer": {
+        "prefix": "Computer",
+        "body":["Computer(inM=${1:input16}, instruction=${2:instruction16}, reset=${3:reset}, outM=${4:outM16}, writeM=${5:outwriteIntoM}, addressM=${6:outAddressM15}, pc=${7:outPc15});"],
+        "description": "The Computer chip,\n i.e. the top-most chip of the Hack architecture. The Computer chip consists of CPU, ROM and RAM chip-parts. It is assumed that the ROM is pre-loaded with some Hack program. The Computer chip has a single 1-bit input, named \"reset\". When reset is 0, the stored program starts executing. When reset is 1, the program's execution restarts. Thus, to start a program’s execution, reset must be pushed \"up\" (1) and \"down\" (0). From this point onward the user is at the mercy of the software. In particular, depending on the program loaded into the computer, the screen may show some output and the user may be expected to interact with the computer via the keyboard.\n"
+    },
+    "Memory": {
+        "prefix": "Memory",
+        "body":["Memory(in=${1:input16}, load=${2:loading}, address=${3:address15}, out=${4:output16});"],
+        "description": "The Memory chip,\n the chip always outputs the value stored at the memory location specified by address. If load == 1, the in value is loaded into the memory location specified by address. This value becomes available through the out output in the next time step. Address space rules: Only the upper 16K+8K+1 words of the Memory chip are used. Access to address>0x6000 is invalid. Access to any address in the range 0x4000 to 0x5FFF results in accessing the screen memory map. Access to address 0x6000 results in accessing the keyboard memory map. The behavior in these addresses is described in the Screen and Keyboard chip specifications given in the book.\n"
+    },
+    "Start": {
+        "prefix": "CHIP",
+        "body":[
+            "CHIP ${1:Name} {",
+            "",
+            "\tIN ${2:input};",
+            "\tOUT ${3:out};",
+            "\tPARTS:",
+            "\t// Put your code here:",
+            "\t$0",
+            "}"
+        ]
+    }
+}

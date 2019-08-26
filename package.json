@@ -1,0 +1,59 @@
+{
+    "name": "nand2tetris",
+    "displayName": "Nand2Tetris",
+    "description": "A helper for your Nand2Tetris projects.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.37.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Extension Packs",
+        "Language Packs",
+        "Themes"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "hdl",
+            "aliases": ["HDL", "hdl"],
+            "extensions": [".hdl"],
+            "configuration": "./language-configuration.json"
+        },{
+            "id": "asm",
+            "aliases": ["Assembly", "asm", "ASM"],
+            "extensions": [".asm"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "hdl",
+            "scopeName": "source.hdl",
+            "path": "./syntaxes/hdl.tmLanguage.json"
+        },
+        {
+            "language": "asm",
+            "scopeName": "source.asm",
+            "path": "./syntaxes/asm.tmLanguage.json"
+        }],
+        "snippets": [
+            {
+              "language": "hdl",
+              "path": "./snippets.json"
+            }
+        ],
+        "iconThemes": [
+            {
+              "id": "Nand2Tetris",
+              "label": "Nand2Tetris Theme",
+              "path": "./fileicons/nand2tetris-icon-theme.json"
+            }
+        ]
+    },
+    "publisher": "Louis Stanko",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Throvn/vscode-nand2tetris"
+      },
+    "icon": "icon.png",
+    "license": "MIT"
+}
