@@ -8,3 +8,8 @@ All notable changes to the "nand2tetris" extension will be documented in this fi
     - Added syntax highlighting for .asm and .hdl
 
     - Added icon pack
+
+## 0.0.2 - Patch
+
+- `28.08.19` 
+    - Downgraded the minimum required Visual Studio Code version for the extension
