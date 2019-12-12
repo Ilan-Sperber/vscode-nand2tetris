@@ -2,7 +2,7 @@
     "name": "nand2tetris",
     "displayName": "Nand2Tetris",
     "description": "A helper for your Nand2Tetris projects.",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "engines": {
         "vscode": "^0.10.5"
     },

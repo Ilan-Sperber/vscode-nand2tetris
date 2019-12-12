@@ -1,4 +1,8 @@
 # Nand2Tetris - Extension 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Throvn/vscode-nand2tetris/graphs/commit-activity)
+[![Badge for installs for Visual Studio Code extension Nand2Tetris](https://vsmarketplacebadge.apphb.com/installs/throvn.nand2tetris.svg)](https://marketplace.visualstudio.com/items?itemName=throvn.nand2tetris)
+
 ## What's in it?
 
 * **Syntax highlighting** for the HDL language, Assembly and **Jack** code from the [Nand2Tetris Course](https://www.nand2tetris.org/)
@@ -7,8 +11,14 @@
 
 ## Get up and running right away
 
+#### Install via vs-code marketplace
+
 1. Just click install and select the icon theme `Nand2Tetris Theme`
 2. Start focusing on the real tasks
+
+#### Install via command line
+1. Download [nand2tetris-0.0.3.vsix](nand2tetris-0.0.3.vsix).
+2. Run `code --install-extension nand2tetris-0.0.3.vsix`
 
 ## Preview
 
