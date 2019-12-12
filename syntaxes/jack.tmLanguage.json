@@ -25,13 +25,16 @@
 		},
 		{
 			"include": "#blockComment"
+		},
+		{
+			"include": "#meta"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.Jack",
-				"match": "\\b(PARTS|IN|OUT)\\b"
+				"match": "\\b(while|return|field|this|if|else)\\b"
 			}]
 		},		
 		"strings": {
@@ -57,7 +60,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.tag",
-					"match": "\\b(true|false)\\b"
+					"match": "\\b(this|let|var|class|function|method|constructor)\\b"
 				}
 			]
 		},
@@ -65,7 +68,7 @@
 			"patterns": [
 				{
 					"name": "markup.bold",
-					"match": "([a-z]|[A-Z]|\\[|\\]|[0-9]|\\.)+="
+					"match": "\\b(true|false|null)\\b"
 				}
 			]
 		},
@@ -73,7 +76,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.function",
-					"match": "([a-z]|[A-Z]|[0-9]| )+(?=\\()"
+					"match": "([a-z]|[A-Z]|[0-9])+(?=\\()"
 				}
 			]
 		},
@@ -81,11 +84,11 @@
 			"patterns": [
 				{
 					"name": "entity.name.type",
-					"match": "(?<=\\[)(.*?)(?=\\])"
+					"match": "\\b[A-Z]([A-Za-z0-9_-])+\\b"
 				},
 				{
 					"name": "variable.name",
-					"match": "CHIP"
+					"match": "\\b(do|int|char|void|static|boolean)\\b"
 				}
 			]
 		},
