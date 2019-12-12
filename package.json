@@ -37,6 +37,20 @@
                     ".asm"
                 ],
                 "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "jack",
+                "aliases": [
+                    "Jack",
+                    "jack",
+                    "JACK",
+                    "jck",
+                    "JCK"
+                ],
+                "extensions": [
+                    ".jack"
+                ],
+                "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
@@ -49,12 +63,21 @@
                 "language": "asm",
                 "scopeName": "source.asm",
                 "path": "./syntaxes/asm.tmLanguage.json"
+            },
+            {
+                "language": "jack",
+                "scopeName": "source.jack",
+                "path": "./syntaxes/jack.tmLanguage.json"
             }
         ],
         "snippets": [
             {
                 "language": "hdl",
-                "path": "./snippets/snippets.json"
+                "path": "./snippets/hdl.json"
+            },
+            {
+                "language": "jack",
+                "path": "./snippets/jack.json"
             }
         ],
         "iconThemes": [

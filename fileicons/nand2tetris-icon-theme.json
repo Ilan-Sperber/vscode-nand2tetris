@@ -12,7 +12,8 @@
         "zip": "_zip_folder",
         "hack": "_hack_file",
         "tst": "_tst_file",
-        "asm": "_asm_file"
+        "asm": "_asm_file",
+        "jack": "_jack_file"
 	},
 	"fileNames": {
 		// icons by file name
@@ -35,7 +36,7 @@
 			"iconPath": "./images/folder-open-dark.svg"
 		},
 		"_file_dark": {
-			"iconPath": "./images/document-dark.svg"
+			"iconPath": "./images/document-dark.png"
         },
         "_hdl_file": {
             "iconPath": "./images/hdl.png"
@@ -47,7 +48,7 @@
             "iconPath": "./images/compute.png"
         },
         "_zip_folder": {
-            "iconPath": "./images/zip.svg"
+            "iconPath": "./images/zip.png"
         },
         "_hack_file": {
             "iconPath": "./images/hack.png"
@@ -57,6 +58,9 @@
         },
         "_asm_file": {
             "iconPath": "./images/asm.png"
+        },
+        "_jack_file": {
+            "iconPath": "./images/jack.png"
         }
     }
       

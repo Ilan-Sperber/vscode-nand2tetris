@@ -5,6 +5,7 @@
         "description": "Nand Gate \n First compares the two inputs ((a,b) = c) then negates the output (out = Not c).\n | a | b |out\n| 0 | 0 | 1\n| 1 | 0 | 1\n| 0 | 1 | 1\n| 1 | 1 | 0\n" 
     },
     "And": {
+        "type": "unit",
         "prefix": "And",
         "body": ["And(a=${1:inA}, b=${2:inB}, out=${3:out});"],
         "description": "And Gate \n Compares the two inputs (a,b).\n | a | b |out\n| 0 | 0 | 0\n| 1 | 0 | 0\n| 0 | 1 | 0\n| 1 | 1 | 1\n" 
@@ -152,7 +153,7 @@
     "Memory": {
         "prefix": "Memory",
         "body":["Memory(in=${1:input16}, load=${2:loading}, address=${3:address15}, out=${4:output16});"],
-        "description": "The Memory chip,\n the chip always outputs the value stored at the memory location specified by address. If load == 1, the in value is loaded into the memory location specified by address. This value becomes available through the out output in the next time step. Address space rules: Only the upper 16K+8K+1 words of the Memory chip are used. Access to address>0x6000 is invalid. Access to any address in the range 0x4000 to 0x5FFF results in accessing the screen memory map. Access to address 0x6000 results in accessing the keyboard memory map. The behavior in these addresses is described in the Screen and Keyboard chip specifications given in the book.\n"
+        "description": "The Memory chip,\n the chip always outputs the value stored at the memory location specified by address. If load == 1, the in value is loaded into the memory location specified by address. This value becomes available through the out output in the next time step. Address space rules: Only the upper 16K+8K+1 words of the Memory chip are used. Access to address>0x6000 is invalid. Access to any address in the range 0x4000 to 0x5FFF results in accessing the screen memory map. Access to address 0x6000 results in accessing the keyboard memory map. The behavior in these addresses is described in the Screen and Keyboard chip specifications given in the book.\n",
     },
     "Start": {
         "prefix": "CHIP",

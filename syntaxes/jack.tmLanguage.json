@@ -1,0 +1,108 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Jack",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#boolean"
+		},
+		{
+			"include": "#params"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#grammar"
+		},
+		{
+			"include": "#blockComment"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.Jack",
+				"match": "\\b(PARTS|IN|OUT)\\b"
+			}]
+		},		
+		"strings": {
+			"name": "string.quoted.double.Jack",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.Jack",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash",
+					"match": "//.*"
+				}
+			]
+		},
+		"boolean": {
+			"patterns": [
+				{
+					"name": "entity.name.tag",
+					"match": "\\b(true|false)\\b"
+				}
+			]
+		},
+		"params": {
+			"patterns": [
+				{
+					"name": "markup.bold",
+					"match": "([a-z]|[A-Z]|\\[|\\]|[0-9]|\\.)+="
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function",
+					"match": "([a-z]|[A-Z]|[0-9]| )+(?=\\()"
+				}
+			]
+		},
+		"grammar": {
+			"patterns": [
+				{
+					"name": "entity.name.type",
+					"match": "(?<=\\[)(.*?)(?=\\])"
+				},
+				{
+					"name": "variable.name",
+					"match": "CHIP"
+				}
+			]
+		},
+		"blockComment": {
+			"patterns": [
+				{
+					"begin": "\\/\\*\\*",
+					"end": "\\*\\/",
+					"name": "comment.block"
+				},
+				{
+					"begin": "\\/\\*",
+					"end": "\\*\\/",
+					"name": "comment.block"
+				}
+			]
+		}
+	},
+	"scopeName": "source.jack"
+}
