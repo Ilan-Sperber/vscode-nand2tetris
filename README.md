@@ -73,5 +73,5 @@ Beta release... feel free to open an issue if you have any problems.
 6. .out
 
 
--------------------------------------
+---
 **Enjoy!**
