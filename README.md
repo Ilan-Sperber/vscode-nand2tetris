@@ -24,15 +24,15 @@
 
 #### Code completion
 
-![Syntax highlighting](preview-syntax.gif)
+![Syntax highlighting](images/preview-syntax.gif)
 
 #### Assembly syntax & Jack highlighting
 
-![Assembly Syntax](asm-syntax.png)
+![Assembly Syntax](images/asm-syntax.png)
 
 ### The icons
 
-![Icon Pack](preview-icons.png)
+![Icon Pack](images/preview-icons.png)
 
 ## Known Issues
 
