@@ -17,8 +17,8 @@
 2. Start focusing on the real tasks
 
 #### Install via command line
-1. Download [nand2tetris-0.0.4.vsix](nand2tetris-0.0.4.vsix).
-2. Run `code --install-extension nand2tetris-0.0.4.vsix`
+1. Download [nand2tetris-0.0.5.vsix](nand2tetris-0.0.5.vsix).
+2. Run `code --install-extension nand2tetris-0.0.5.vsix`
 
 ## Preview
 
