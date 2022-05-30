@@ -34,3 +34,6 @@ All notable changes to the "nand2tetris" extension will be documented in this fi
         - for a list of all implemented chips see: https://drive.google.com/file/d/1IsDnH0t7q_Im491LQ7_5_ajV0CokRbwR/view
 
 ## 0.0.5 - Updated Readme
+
+## 0.0.6 - Fixed typo in XOr truth table
+- `30.05.22` Thanks to @niallmurphy-ie for pointing it out!

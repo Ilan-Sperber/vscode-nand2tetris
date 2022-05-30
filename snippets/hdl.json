@@ -201,6 +201,6 @@
     "Xor Gate": {
         "prefix": "Xor",
         "body": ["Xor(a=${1:inA}, b=${2:inB}, out=${3:out});"],
-        "description": "Xor Gate \n Outputs the result of (not (a and b)).\n | a | b |out\n| 0 | 0 | 1\n| 1 | 0 | 1\n| 0 | 1 | 1\n| 1 | 1 | 0\n" 
+        "description": "Xor Gate \n Outputs the result of (not (a and b)).\n| a | b |out\n| 0 | 0 | 0\n| 1 | 0 | 1\n| 0 | 1 | 1\n| 1 | 1 | 0\n" 
     }
 }

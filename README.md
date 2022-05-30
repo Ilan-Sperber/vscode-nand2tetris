@@ -17,7 +17,7 @@
 2. Start focusing on the real tasks
 
 #### Install via command line
-1. Download [nand2tetris-0.0.5.vsix](nand2tetris-0.0.5.vsix).
+1. Download [nand2tetris-0.0.6.vsix](nand2tetris-0.0.6.vsix).
 2. Run `code --install-extension nand2tetris-0.0.5.vsix`
 
 ## Preview
@@ -39,6 +39,8 @@
 No issues known.
 
 ## Release Notes
+
+### 0.0.6 - Fixed bugs
 
 ### 0.0.4 - Added missing chips
 
